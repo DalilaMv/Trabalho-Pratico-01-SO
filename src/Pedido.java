@@ -1,6 +1,7 @@
-public class Pedido {
+public class Pedido implements Comparable<Pedido> {
 
-    private static int id = 0;
+    private static int pedidos = 0;
+    private int id;
     private String nome;
     private double peso;
     private double preco;
@@ -9,7 +10,7 @@ public class Pedido {
         this.nome = nome;
         this.peso = peso;
         this.preco = preco;
-        id = id++;
+        this.id = ++pedidos;
     }
 
     public String getNome() {
@@ -34,5 +35,24 @@ public class Pedido {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int compareTo(Pedido pedido) {
+        int retorno = 0;
+        if (pedido.getPeso() > getPeso()) {
+            retorno = -1;
+        } else if (pedido.getPeso() < getPeso()){
+            retorno = 1;
+        }
+
+        return retorno;
     }
 }
