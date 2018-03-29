@@ -45,7 +45,7 @@ public class principal {
 	                    System.out.println("Digite o preco: ");
 	                    System.out.print("-> ");        
 	                    preco = teclado.nextDouble();
-	                    Pedido c = new Pedido(nome,peso,preco);
+	                    Pedido c = new Pedido(nome,peso,0,preco);
 	listaPedidos.add(c);
 	                    break;
 	                    
