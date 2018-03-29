@@ -5,11 +5,13 @@ public class Pedido implements Comparable<Pedido> {
     private String nome;
     private double peso;
     private double preco;
+    private double duracao;
 
     public Pedido(String nome, double peso, double preco) {
         this.nome = nome;
         this.peso = peso;
         this.preco = preco;
+        this.duracao = peso/35;
         this.id = ++pedidos;
     }
 
@@ -55,4 +57,12 @@ public class Pedido implements Comparable<Pedido> {
 
         return retorno;
     }
+
+	public double getDuracao() {
+		return duracao;
+	}
+
+	public void setDuracao(double duracao) {
+		this.duracao = duracao;
+	}
 }
