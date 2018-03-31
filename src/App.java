@@ -1,11 +1,14 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class App {
+public class App{
     public static void main(String[] args) {
-
+    	
+    	Arquivo arquivo = new Arquivo();
+    	
         System.out.println("Simulador de lavanderia");
 
+        
         // Instanciando os pedidos
         Pedido p1 = new Pedido("Brian Bruno", 35, 0, 10.00);
         Pedido p2 = new Pedido("Dalila Mylena", 25.85, 0, 6.00);
@@ -17,16 +20,24 @@ public class App {
         Pedido p8 = new Pedido("Família Brandão", 50.32, 0, 100.58);
 
         // Adicionando na lista
+       // gravando no arquivo 
         List<Pedido> pedidos = new ArrayList<>();
-        pedidos.add(p1);
-        pedidos.add(p2);
-        pedidos.add(p3);
-        pedidos.add(p4);
-        pedidos.add(p5);
-        pedidos.add(p6);
-        pedidos.add(p7);
-        pedidos.add(p8);
-
+        arquivo.gravar(p1);
+        arquivo.gravar(p2);
+        arquivo.gravar(p3);
+        arquivo.gravar(p4);
+        arquivo.gravar(p5);
+        arquivo.gravar(p6);
+        arquivo.gravar(p7);
+        arquivo.gravar(p8);
+     
+        for (int i=0;i<arquivo.lerTotal();i++) {
+        	String[] pedido= arquivo.lerLinha().split(";");
+        	Pedido px = new Pedido(pedido[0],Double.parseDouble(pedido[1]),0,Double.parseDouble(pedido[2]));
+           
+        	pedidos.add(px);
+        }
+        
         // criando uma fila por ordem de chegada
         OrdemChegada fifo = new OrdemChegada(pedidos);
         fifo.simularFila();

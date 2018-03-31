@@ -1,0 +1,9 @@
+8
+Brian Bruno; 35.0; 10.0
+Dalila Mylena; 25.85; 6.0
+Davi Brandão; 72.0; 18.0
+João Caram; 10.0; 5.5
+Lucas Saldanha; 12.85; 17.2
+Sandro Jerônimo <3; 95.88; 25.65
+Teknisa Service; 189.66; 1000.51
+Família Brandão; 50.32; 100.58
