@@ -3,32 +3,11 @@ import static java.lang.String.format;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FilaPrioridade{
+public class FilaPrioridade extends Ordenador{
 	 private static List<Pedido> listaProntos = new ArrayList<Pedido>();
 
 	    public FilaPrioridade(List<Pedido> pedido) {
-	        try {
-	        	double retornoMedio = 0;
-	            double tempoRetorno = 0;
-	            int totalProcessos = pedido.size();
-	            double retorno = 0;
 	            preparaListaProntos(pedido);
-	            System.out.println("\n------------Fila de Prioridade------------");
-	    
-				while (!listaProntos.isEmpty()) {
-					Pedido p = listaProntos.remove(0); 
-					retorno += p.getDuracao();
-					tempoRetorno += retorno;
-					System.out.println(format("%s - Tempo de espera do primeiro lote: %.1f",p.getNome(),retorno));
-				}
-
-	    
-	           retornoMedio = tempoRetorno/totalProcessos;
-	           System.out.print(format("\ntempo medio - %.1f", retornoMedio));
-	          
-	        } catch (Exception e) {
-	            System.err.println(e.getMessage());
-	        }
 	    }
 	    
 	
@@ -54,6 +33,15 @@ public class FilaPrioridade{
 			if(p.size() == 1)
 				listaProntos.add(p.remove(0));
 	    }
+
+
+		 public void simularFila() {
+
+		        System.out.println("\n################## Atendimento em Fila de Prioridade ##################\n");
+		        // mostra como a fila ficará
+		        exibirFila(listaProntos);
+
+		    }
 
 	  
 	    

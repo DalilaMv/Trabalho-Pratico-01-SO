@@ -19,13 +19,20 @@ public class App{
         	pedidos.add(px);
         }
         
+    
+
+        //criando uma fila de prioridade 
+        FilaPrioridade fp = new FilaPrioridade(pedidos);
+        fp.simularFila();
+        
+        // criando uma fila de menor primeiro
+        OrdemMenorPrimeiro menorPrimeiro = new OrdemMenorPrimeiro(pedidos);
+        menorPrimeiro.simularFila();
+        
         // criando uma fila por ordem de chegada
         OrdemChegada fifo = new OrdemChegada(pedidos);
         fifo.simularFila();
 
-        // criando uma fila de menor primeiro
-        OrdemMenorPrimeiro menorPrimeiro = new OrdemMenorPrimeiro(pedidos);
-        menorPrimeiro.simularFila();
-
+ 
     }
 }
