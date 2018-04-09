@@ -28,7 +28,7 @@ public class Ordenador {
 
                 // calcula o tempo de resposta desse pedido
                 tempoResposta = tempoResposta + tempoTotal;
-                // calcula o tempo total que a fila est√° em execu√ß√£o
+                // calcula o tempo total que a fila est· em execuÁ„o
                 tempoTotal = tempoTotal + tempoLavagem;
             }
 

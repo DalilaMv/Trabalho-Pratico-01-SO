@@ -32,6 +32,10 @@ public class App{
         // criando uma fila por ordem de chegada
         OrdemChegada fifo = new OrdemChegada(pedidos);
         fifo.simularFila();
+        
+        // criando uma fila por Round Robin
+        Round round = new Round(pedidos);
+        round.simularFila();
 
  
     }

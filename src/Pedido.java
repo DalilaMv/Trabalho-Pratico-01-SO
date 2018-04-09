@@ -7,6 +7,7 @@ public class Pedido implements Comparable<Pedido> {
     private double chegada;
     private double preco;
     private double duracao;
+    private double duracaoRestante;
 
     public Pedido(String nome, double peso,  double chegada, double preco) {
         this.nome = nome;
@@ -15,6 +16,7 @@ public class Pedido implements Comparable<Pedido> {
         this.preco = preco;
         this.duracao = peso/35;
         this.id = ++pedidos;
+        this.duracaoRestante = this.duracao;
     }
 
     public String getNome() {
@@ -74,5 +76,13 @@ public class Pedido implements Comparable<Pedido> {
 
 	public void setDuracao(double duracao) {
 		this.duracao = duracao;
+	}
+
+	public double getDuracaoRestante() {
+		return duracaoRestante;
+	}
+
+	public void setDuracaoRestante(double duracaoRestante) {
+		this.duracaoRestante = duracaoRestante;
 	}
 }
