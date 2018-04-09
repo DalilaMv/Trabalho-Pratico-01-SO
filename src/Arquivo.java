@@ -13,7 +13,7 @@
 		public void gravar(Pedido pedido) {
 
 			try {
-				File arquivo = new File("arquivo.txt");
+				File arquivo = new File("dados.txt");
 				FileWriter fileWriter = new FileWriter(arquivo, true);
 				BufferedWriter escrever = new BufferedWriter(fileWriter);
 				cont=lerTotal();
@@ -31,14 +31,14 @@
 				regravar();
 				System.out.println("Registro gravado com sucesso");
 			}catch(NullPointerException ex){
-				System.out.println("Não foi possível gravar o registro");
+				System.out.println("Nï¿½o foi possï¿½vel gravar o registro");
 			}catch (IOException ex) {
-				System.out.println("Arquivo não existe");
+				System.out.println("Arquivo nï¿½o existe");
 			} 
 		}
 		private void regravar() {
 			try {
-				File arquivo = new File("arquivo.txt");
+				File arquivo = new File("dados.txt");
 				File temp = new File("temp.txt");
 				FileReader ler = new FileReader(arquivo);
 				BufferedReader lerb = new BufferedReader(ler);
@@ -61,12 +61,12 @@
 				arquivo.delete();
 				transferir();
 			} catch (IOException e) {
-				System.out.println("Arquivo não existe");
+				System.out.println("Arquivo nï¿½o existe");
 			}
 		}
 		private void transferir() {
 			try {
-				File arquivo = new File("arquivo.txt");
+				File arquivo = new File("dados.txt");
 				File temp = new File("temp.txt");
 				FileReader ler = new FileReader(temp);
 				BufferedReader lerb = new BufferedReader(ler);
@@ -85,7 +85,7 @@
 				fileWriter.close();
 				temp.delete();
 			} catch (IOException e) {
-				System.out.println("Arquivo não existe");
+				System.out.println("Arquivo nï¿½o existe");
 			}
 		}
 	
@@ -93,7 +93,7 @@
 			String linha;
 			int total=0;
 			try {
-				File arquivo = new File("arquivo.txt");
+				File arquivo = new File("dados.txt");
 				FileReader ler = new FileReader(arquivo);
 				BufferedReader lerb = new BufferedReader(ler);
 				linha=lerb.readLine();
@@ -105,7 +105,7 @@
 				lerb.close();
 				ler.close();
 			} catch (IOException e) {
-				System.out.println("Arquivo não existe");
+				System.out.println("Arquivo nï¿½o existe");
 			}
 			return total;
 		}
@@ -114,7 +114,7 @@
 		public String lerLinha() {
 			String linha=null;
 			try {
-				File arquivo = new File("arquivo.txt");
+				File arquivo = new File("dados.txt");
 				FileReader ler = new FileReader(arquivo);
 				BufferedReader lerb = new BufferedReader(ler);
 				lerb.readLine();
@@ -126,7 +126,7 @@
 				ler.close();
 				contl++;
 			} catch (IOException e) {
-				System.out.println("Arquivo não existe");
+				System.out.println("Arquivo nï¿½o existe");
 			}
 			return linha;
 		}

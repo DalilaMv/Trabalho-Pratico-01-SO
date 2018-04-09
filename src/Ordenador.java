@@ -33,7 +33,7 @@ public class Ordenador {
             }
 
             System.out.println("Tempo total: " + formatarTempo((int) tempoTotal));
-            System.out.println("Tempo médio aproximado de resposta: " + formatarTempo((int) tempoResposta / pedidos.size()));
+            System.out.println("Tempo medio aproximado de resposta: " + formatarTempo((int) tempoResposta / pedidos.size()));
         }
     }
 

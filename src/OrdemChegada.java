@@ -11,7 +11,7 @@ public class OrdemChegada extends Ordenador {
 
     public void simularFila() {
 
-        System.out.println("\n######### Atendimento em Ordem de Chegada #########\n");
+        System.out.println("\n################## Atendimento em Ordem de Chegada ##################\n");
         // mostra como a fila ficará
         exibirFila(pedidos);
 
