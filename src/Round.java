@@ -20,10 +20,11 @@ public class Round extends Ordenador{
     		//Caso contrário o resto do tempo é pego e o pedido finalizado
             if (p.getDuracaoRestante() > QUANTUM) {
                 p.setDuracaoRestante(p.getDuracaoRestante() - QUANTUM);
-                preparaListaProntos(pedidos);
+                //preparaListaProntos(pedidos);
                 // adiciona o pedido no final da lista, pois não foi finalizado
                 listaProntos.add(p);
             }else {
+            	listaProntos.remove(p);
             	listaFinal.add(p);
             }
         }
